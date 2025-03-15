@@ -540,6 +540,12 @@
 -   She Standard Prompt: a prompt consisting of only a questions or
     instruction. The basic building block of prompt engineering.
 
--   
-
--   
+## Prompting Fundamentals - The Setup
+- The System Message
+  - Also called the system prompt
+  - Initial prompt provided to the model by it's creator
+  - guides the model even before we start interacting with it.
+  - For example before you even chat with ChatGPT for the first time it has already been pompted with somehting like: 
+>"You are ChatGPT, a large language model based on the GPT-4o-mini model and trained by OpenAI. Current date: 2025-03-16
+Image input capabilities: Enabled Personality: v2..."
+- The system message is very powerful. it can be used to give it a certain bias, personality, to shape the answers a certain way.
