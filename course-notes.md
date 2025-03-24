@@ -301,7 +301,7 @@
     number. ChatGPT would then write the python code to do this,
     interpret and run the code and then give the result.
 
--   
+-
 
 ## How LLM's Work
 
@@ -407,9 +407,9 @@
         -   The weights and biases make up the total number of
             parameters.
 
-        -   
+        -
 
-        -   
+        -
 
 -   All the 96 layers except for the input and output layers are called
     hidden layers.
@@ -541,11 +541,38 @@
     instruction. The basic building block of prompt engineering.
 
 ## Prompting Fundamentals - The Setup
-- The System Message
-  - Also called the system prompt
-  - Initial prompt provided to the model by it's creator
-  - guides the model even before we start interacting with it.
-  - For example before you even chat with ChatGPT for the first time it has already been pompted with somehting like: 
->"You are ChatGPT, a large language model based on the GPT-4o-mini model and trained by OpenAI. Current date: 2025-03-16
-Image input capabilities: Enabled Personality: v2..."
-- The system message is very powerful. it can be used to give it a certain bias, personality, to shape the answers a certain way.
+
+-   The System Message
+    -   Also called the system prompt
+    -   Initial prompt provided to the model by it's creator
+    -   guides the model even before we start interacting with it.
+    -   For example before you even chat with ChatGPT for the first time it has already been pompted with somehting like:
+        > "You are ChatGPT, a large language model based on the GPT-4o-mini model and trained by OpenAI. Current date: 2025-03-16
+        > Image input capabilities: Enabled Personality: v2..."
+-   The system message is very powerful. it can be used to give it a certain bias, personality, to shape the answers a certain way.
+-   After the systme message there is a specific user message. This can include context for the AI like the user is a web developer, they like detailed answers and sources, they are studying this class and that class.
+
+## Context
+
+### Context What is it?
+
+-   More context = better result
+-   More information in a prompt = better result
+-   Chat GPT can infer from information you give. EG you might ask about a restaurant and share the context of it being a special date, you want it to be romatic and it is in XYZ location. The AI can then not only suggest a restaurant but also may infer that you might like the option of a romatic walk at the local nearby beach after and provide details for that too.
+
+### Context - The Context Window
+- Too much context can negatively impact your result
+- This is becuase ChatGPT has a token limit.
+- 1 token = 0.75 words approx
+- Token limit = Context Window
+- This token limit is kind of like the amount or words the AI can keep in its head at one time.
+- ChatGPT 4: 8192 tokens, approx 6000 words (double prev chatgpt verson)
+- Claude 2 has 100,000 token limit
+- Model creators are always looking to increase this limit.
+- Technically ChatGPT has no memory?
+- Every time you send a prompt, your entire prompt history is tacked onto that prompt.
+- This tacked on history counts as tokens against the token limit.
+- When we write a prompt, if it goes over the token limit, the AI will remove past tokens to make way for the new tokens in a first in first out fashion.
+- Therefore we will lose context that may be important, or expexted to be part of the conversation, if we say too much.
+- Managing the token limit is crucial to maintaining the accuracy and coherence of a model's outputs.
+- Claud 2 with its very large token limit/context window may be better for large documents or when lots of context is required.
