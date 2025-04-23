@@ -561,18 +561,25 @@
 -   Chat GPT can infer from information you give. EG you might ask about a restaurant and share the context of it being a special date, you want it to be romatic and it is in XYZ location. The AI can then not only suggest a restaurant but also may infer that you might like the option of a romatic walk at the local nearby beach after and provide details for that too.
 
 ### Context - The Context Window
-- Too much context can negatively impact your result
-- This is becuase ChatGPT has a token limit.
-- 1 token = 0.75 words approx
-- Token limit = Context Window
-- This token limit is kind of like the amount or words the AI can keep in its head at one time.
-- ChatGPT 4: 8192 tokens, approx 6000 words (double prev chatgpt verson)
-- Claude 2 has 100,000 token limit
-- Model creators are always looking to increase this limit.
-- Technically ChatGPT has no memory?
-- Every time you send a prompt, your entire prompt history is tacked onto that prompt.
-- This tacked on history counts as tokens against the token limit.
-- When we write a prompt, if it goes over the token limit, the AI will remove past tokens to make way for the new tokens in a first in first out fashion.
-- Therefore we will lose context that may be important, or expexted to be part of the conversation, if we say too much.
-- Managing the token limit is crucial to maintaining the accuracy and coherence of a model's outputs.
-- Claud 2 with its very large token limit/context window may be better for large documents or when lots of context is required.
+
+-   Too much context can negatively impact your result
+-   This is becuase ChatGPT has a token limit.
+-   1 token = 0.75 words approx
+-   Token limit = Context Window
+-   This token limit is kind of like the amount or words the AI can keep in its head at one time.
+-   ChatGPT 4: 8192 tokens, approx 6000 words (double prev chatgpt verson)
+-   Claude 2 has 100,000 token limit
+-   Model creators are always looking to increase this limit.
+-   Technically ChatGPT has no memory?
+-   Every time you send a prompt, your entire prompt history is tacked onto that prompt.
+-   This tacked on history counts as tokens against the token limit.
+-   When we write a prompt, if it goes over the token limit, the AI will remove past tokens to make way for the new tokens in a first in first out fashion.
+-   Therefore we will lose context that may be important, or expexted to be part of the conversation, if we say too much.
+-   Managing the token limit is crucial to maintaining the accuracy and coherence of a model's outputs.
+-   Claud 2 with its very large token limit/context window may be better for large documents or when lots of context is required.
+-   For the model you're chatting with (GPT-4-turbo), the context window is 128,000 tokens. approx 96000 words.
+-   When providing a lot of context, ChatGPT remembers what you say at the start and end of your text better than the model.
+-   In some cases too much context gets worse results than no context at all.
+-   LLM performance decreases as the context increases.
+-   Be precise.
+-   
