@@ -552,7 +552,6 @@
 -   The system message is very powerful. it can be used to give it a certain bias, personality, to shape the answers a certain way.
 -   After the systme message there is a specific user message. This can include context for the AI like the user is a web developer, they like detailed answers and sources, they are studying this class and that class.
 
-## Context
 
 ### Context What is it?
 
@@ -582,4 +581,16 @@
 -   In some cases too much context gets worse results than no context at all.
 -   LLM performance decreases as the context increases.
 -   Be precise.
--   
+
+### Personas and Roles
+- Telling the model what it is EG a 9th grade teacher, a senior programmer.
+- By giving the model a persona we give it more context
+- Personas give more accurate outputs. 
+- We should always provide the model with a persona.
+- Improves our ability to engage with the model.
+- Could be used for:
+  - Create character outlines and then ask ChatGPT to play out a scene to create a script
+  - Start a debate and and get good debate points you could use.
+  - Chat to and learn from your heroes.
+  - Give your chatbot a style to interact with your customers
+  - 
