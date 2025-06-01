@@ -593,4 +593,17 @@
   - Start a debate and and get good debate points you could use.
   - Chat to and learn from your heroes.
   - Give your chatbot a style to interact with your customers
-  - 
+
+## Prompting Fundamentals - The Instructions
+- Be clear and specific
+- Using delimeters like ```, ###, ======, <data></data>, -----, can help communicate more clearly your message to the model.
+- Be consistent with delimeters. Use bullet points, ordered or unordered where it makes sense. 
+- Delimiters like ,|; and new line can be useful to make a message clearer too.
+- Ask specifically for what you actually want, keep it simple and clear. If you want to get the file extension for a filename using python ask, "I want to get the file extension for any file using python." Don't for example guess at the solution and ask for the last 3 characters in the filename. Ask for what you actually want.
+- Goals are better than solutions. Your prompt should contain your goal, what you want to acheive rather than your proposed solution for getting there.
+- Zero shot prompting: LLM can do something with out any further training from me. 
+- One shot prompting: Giving one example or exemplar of the result we want. EG Multiply 6 by 10 --- (and now for the one shot) Use this format as an example: Mulitply 4 * 10: 40
+- Few shot prompting: When you give a few examples to train the model first before asking it for an answer.
+- ![exmple of training a model before asking it a question with a few shots](media/few-shot-prompt.png)
+- Adding a few shots, a few examples can increase accuracy by as much as 50%, especially in bigger models.
+- How many exmples works best: 4-8 examples is ideal. After 8 there is very little gain in accuracy.
