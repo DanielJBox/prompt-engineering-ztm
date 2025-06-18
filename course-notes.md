@@ -552,7 +552,6 @@
 -   The system message is very powerful. it can be used to give it a certain bias, personality, to shape the answers a certain way.
 -   After the systme message there is a specific user message. This can include context for the AI like the user is a web developer, they like detailed answers and sources, they are studying this class and that class.
 
-
 ### Context What is it?
 
 -   More context = better result
@@ -583,27 +582,38 @@
 -   Be precise.
 
 ### Personas and Roles
-- Telling the model what it is EG a 9th grade teacher, a senior programmer.
-- By giving the model a persona we give it more context
-- Personas give more accurate outputs. 
-- We should always provide the model with a persona.
-- Improves our ability to engage with the model.
-- Could be used for:
-  - Create character outlines and then ask ChatGPT to play out a scene to create a script
-  - Start a debate and and get good debate points you could use.
-  - Chat to and learn from your heroes.
-  - Give your chatbot a style to interact with your customers
+
+-   Telling the model what it is EG a 9th grade teacher, a senior programmer.
+-   By giving the model a persona we give it more context
+-   Personas give more accurate outputs.
+-   We should always provide the model with a persona.
+-   Improves our ability to engage with the model.
+-   Could be used for:
+    -   Create character outlines and then ask ChatGPT to play out a scene to create a script
+    -   Start a debate and and get good debate points you could use.
+    -   Chat to and learn from your heroes.
+    -   Give your chatbot a style to interact with your customers
 
 ## Prompting Fundamentals - The Instructions
-- Be clear and specific
-- Using delimeters like ```, ###, ======, <data></data>, -----, can help communicate more clearly your message to the model.
-- Be consistent with delimeters. Use bullet points, ordered or unordered where it makes sense. 
-- Delimiters like ,|; and new line can be useful to make a message clearer too.
-- Ask specifically for what you actually want, keep it simple and clear. If you want to get the file extension for a filename using python ask, "I want to get the file extension for any file using python." Don't for example guess at the solution and ask for the last 3 characters in the filename. Ask for what you actually want.
-- Goals are better than solutions. Your prompt should contain your goal, what you want to acheive rather than your proposed solution for getting there.
-- Zero shot prompting: LLM can do something with out any further training from me. 
-- One shot prompting: Giving one example or exemplar of the result we want. EG Multiply 6 by 10 --- (and now for the one shot) Use this format as an example: Mulitply 4 * 10: 40
-- Few shot prompting: When you give a few examples to train the model first before asking it for an answer.
-- ![exmple of training a model before asking it a question with a few shots](media/few-shot-prompt.png)
-- Adding a few shots, a few examples can increase accuracy by as much as 50%, especially in bigger models.
-- How many exmples works best: 4-8 examples is ideal. After 8 there is very little gain in accuracy.
+
+-   Be clear and specific
+-   Using delimeters like ```, ###, ======, <data></data>, -----, can help communicate more clearly your message to the model.
+-   Be consistent with delimeters. Use bullet points, ordered or unordered where it makes sense.
+-   Delimiters like ,|; and new line can be useful to make a message clearer too.
+-   Ask specifically for what you actually want, keep it simple and clear. If you want to get the file extension for a filename using python ask, "I want to get the file extension for any file using python." Don't for example guess at the solution and ask for the last 3 characters in the filename. Ask for what you actually want.
+-   Goals are better than solutions. Your prompt should contain your goal, what you want to acheive rather than your proposed solution for getting there.
+-   Zero shot prompting: LLM can do something with out any further training from me.
+-   One shot prompting: Giving one example or exemplar of the result we want. EG Multiply 6 by 10 --- (and now for the one shot) Use this format as an example: Mulitply 4 \* 10: 40
+-   Few shot prompting: When you give a few examples to train the model first before asking it for an answer.
+-   ![exmple of training a model before asking it a question with a few shots](media/few-shot-prompt.png)
+-   Adding a few shots, a few examples can increase accuracy by as much as 50%, especially in bigger models.
+-   How many exmples works best: 4-8 examples is ideal. After 8 there is very little gain in accuracy.
+-   When giving an example showing the LLM the chain of though you would use can help it give a better answer. EG instead of The answer is 11, write the chain of though that lead you to 11 in the example answer.
+-   ![Chain of throught prompting](media/chain-of-thought.png)
+-   Chain of thought prompting allows the model to break down larger problems into multiple smaller simpler steps.
+-   Because the model then shows chain of thought in it's answer it allow you to debug and see where they went wrong in there chain of thought.
+-   Even when providing no examples, just be saying, "Let's think step by step", can help the model be more accurate.
+
+## Guided Project - Create Your Own Career Coach
+
+-
